@@ -4,20 +4,21 @@
 // Accessing Details of rooms that are room number, number of rows and columns.
 void details :: room_details()
 {
-	cin>>t_rooms;
+	infile.open("seat_input.in");
+	infile>>t_rooms;
 	for(int i=0; i<t_rooms; i++)
 	{
-		cin>>room_no[i]>>rows[i]>>cols[i];
+		infile>>room_no[i]>>rows[i]>>cols[i];
 	}
 }
 
 // Accessing the roll numbers and branches.
 void details :: rollno_details()
 {
-	cin>>t_branches;
+	infile>>t_branches;
 	for(int i=0; i<t_branches; i++)
 	{
-		cin>>branch[i]>>start_roll[i]>>end_roll[i];
+		infile>>branch[i]>>start_roll[i]>>end_roll[i];
 	}
 }
 
@@ -30,6 +31,7 @@ void seat_planner :: get_details()
 {
 	room_details();
 	rollno_details();
+	infile.close();
 }
 
 
@@ -119,15 +121,17 @@ void seat_planner :: seat_plan() // function definition to allocate a seat to a 
 
 void seat_planner :: output(int r, int c)      // definition of output member function 
 {
-	cout<<"\n\n\t\t Room No: "<<room<<"\n\n";
+	outfile.open("output.txt", ios::app);
+	outfile<<"\n\n\t\t Room No: "<<room<<"\n\n";
 	for(x=0; x<r; x++)
-		{										//Displaying Final allocated seats
-			for(y=0; y<c; y++)
-			{
-				cout<<seat[y][x]<<"\t\t";
-			}
-			cout<<"\n";
+	{										//Displaying Final allocated seats
+		for(y=0; y<c; y++)
+		{
+			outfile<<seat[y][x]<<"\t\t";
 		}
+		outfile<<"\n";
+	}
+	outfile.close();	
 }
 
 

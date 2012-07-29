@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 const int size = 30;
@@ -15,6 +16,10 @@ protected:
 	// Roll Number variables
 	int t_branches, start_roll[size], end_roll[size];
 	string branch[size];
+
+	// fstream variable
+	ifstream infile;
+	ofstream outfile;
 
 public:
 	//The functions getting Details about rooms and roll numbers of each branch.
@@ -40,15 +45,15 @@ protected:
 	//the below static variable are for fetching the index of next branch and next room
 	static int nxt_branch, nxt_room;  
 	string room;
-
+	
 public:
 
-	void get_details();                 // to call the base class functions having all details of rooms as well as branches and their roll numbers.
-	void set_branch();					// to set new branch after old one has finished.
-	void set_room();					// to set new room
-	void seat_plan();					// to fix the seat allocation	
-	void set_rollno();					// setting roll numbers according to branches.
-	void output(int r, int c);			// to display the seat allocation
+	void get_details();		// to call the base class functions having all details of rooms as well as branches and their roll numbers.
+	void set_branch();		// to set new branch after old one has finished.
+	void set_room();		// to set new room
+	void seat_plan();		// to fix the seat allocation	
+	void set_rollno();		// setting roll numbers according to branches.
+	void output(int r, int c);		// to display the seat allocation
 
 };
 
