@@ -54,7 +54,6 @@ public:
 	void seat_plan();		// to fix the seat allocation	
 	void set_rollno();		// setting roll numbers according to branches.
 	void output(int r, int c);		// to display the seat allocation
-	void valid();
 
 };
 

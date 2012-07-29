@@ -135,4 +135,47 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 	outfile.close();	
 }
 
+void seat_planner :: valid()
+{
+	int students=0, seats=0;
+	char choice;
+
+	for(x=0; x<t_branches; x++)
+	{
+		students += (end_roll[x]-start_roll[x])+1;
+	}
+	for(x=0; x<t_rooms; x++)
+	{
+		seats += (rows[x] * cols[x]);
+	}
+
+	if(students > seats)
+	{
+		//system("clear");
+		cout<<"\nThis strategy is not applicable because of less seats."<<endl
+			<<"Total Seats: "<<seats<<endl<<"Total students: "<<students<<endl
+			<<"More Seats Required: "<<(students-seats)<<endl
+			<<"Please add more rooms in input file."<<endl;
+	}
+	else if(seats > students || seats == students)
+	{
+		//system("clear");
+		cout<<"\nStrategy applicable. Press 'Y' to continue.";
+		cin>>choice;
+	
+		switch(choice)
+		{
+			case 'Y':
+				seat_plan();		  // call to seat_plan() member function of derived class
+				//system("clear");
+				cout<<"\n Check output.txt file for seat plan."<<endl;
+				break;
+		
+			default:
+				cout<<"\nWrong Choice"<<endl;
+		}
+
+	}
+}
+
 

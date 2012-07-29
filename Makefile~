@@ -14,9 +14,6 @@ run:
 
 #	$(CC) -og seat seat_main.cpp
 
-output:
-	rm -f output.txt
-
 clean:
 	rm -f *.o seat output.txt
 
