@@ -92,11 +92,9 @@ void seat_planner :: set_rollno()
 void seat_planner :: seat_plan() // function definition to allocate a seat to a roll number/
 {
 	set_branch();		// call to set_branch() member function
-
 	for(int rm = 0; rm<t_rooms; rm++)
 	{
 		set_room();			// call to set_room() member function
-		
 		for(x=0; x<col; x++)		// Loop for number of columns in a room	
 		{
 			for(y=0; y<row; y++)	// Loop for number of rows in a room
