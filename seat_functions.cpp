@@ -1,126 +1,133 @@
-#include"seat_classes.cpp"
+// including the seat.h file that has classes, functions and variables.
+#include "seat_classes.h"
 
-int inputs::room_count;
-int seat_allot::a;
-int seat_allot::b=1;
-int seat_allot::branch1;
-int seat_allot::branch2=1;
-int seat_allot::branch_count=max_branches;
-
-//function gets room details 
-void inputs::input_room_details()
+// Accessing Details of rooms that are room number, number of rows and columns.
+void details :: room_details()
+{
+	cin>>t_rooms;
+	for(int i=0; i<t_rooms; i++)
 	{
-		for(i=0;i<max_room;i++)
+		cin>>room_no[i]>>rows[i]>>cols[i];
+	}
+}
+
+// Accessing the roll numbers and branches.
+void details :: rollno_details()
+{
+	cin>>t_branches;
+	for(int i=0; i<t_branches; i++)
+	{
+		cin>>branch[i]>>start_roll[i]>>end_roll[i];
+	}
+}
+
+// definition of static variables.
+int seat_planner :: nxt_branch;
+int seat_planner :: nxt_room;
+
+//definition of derived class's member function that calling to base class's member functions to get all details. 
+void seat_planner :: get_details()
+{
+	room_details();
+	rollno_details();
+}
+
+
+void seat_planner :: set_room()			// definition of derived class member function. 
+{
+	if(nxt_room<t_rooms)				
+	{
+		row = rows[nxt_room];			//setting row variable with the total number of rows of next room
+		col = cols[nxt_room];			//setting column variable with the total number of column of next room
+		room = room_no[nxt_room];		
+		nxt_room++;
+	}
+}
+
+void seat_planner :: set_branch()		// definition of set_branch member function of the seat_planner
+{
+	if(nxt_branch==0)					// its intial stage. Sets the start and end roll numbers of two branches.
+	{
+		start_roll1 = start_roll[nxt_branch];
+		end_roll1 = end_roll[nxt_branch];
+		nxt_branch++;
+		start_roll2 = start_roll[nxt_branch];
+		end_roll2 = end_roll[nxt_branch];
+		nxt_branch++;
+
+	}
+	else if(nxt_branch<t_branches)		
+	{										//values of next branch is compared total number of branches before  
+		start = start_roll[nxt_branch];		//setting the start and end roll numbers.
+		end = end_roll[nxt_branch];
+		nxt_branch++;
+	}
+	else
+	{
+		start = 0;					// When branches has finished start and end roll numbers are settled with value 0
+		end = 0;
+	}
+}
+
+void seat_planner :: set_rollno()   
+{		
+	if(start_roll1>end_roll1)     
+	{								// to set the start and end roll numbers of first branch
+		set_branch();
+		start_roll1 = start;
+		end_roll1 = end;
+	}
+
+	if(start_roll2>end_roll2)
+	{								//to set the start and end roll numbers of second branch.
+		set_branch();
+		start_roll2 = start;
+		end_roll2 = end;
+	}
+
+}
+
+void seat_planner :: seat_plan() // function definition to allocate a seat to a roll number/
+{
+	for(int rm = 0; rm<t_rooms; rm++)
+	{
+		set_room();			// call to set_room() member function
+		set_branch();		// call to set_branch() member function
+
+		for(x=0; x<col; x++)		// Loop for number of columns in a room	
 		{
-			cin>>rooms[i]>>rows[i]>>columns[i];
-		} 
-	}
-
-
-
-//getting roll number details from input file
-void inputs::input_rollno_details()
-	{
-		for(i=0;i<max_branches;i++)
-		{
-			cin>>branch_name[i]>>start_roll_no[i]>>end_roll_no[i];
-		} 
-	}
-
-
-
-//setting initial values 
-void seat_allot :: set_initial_values()
-	{
-		input_room_details();
-		input_rollno_details();
-	}
-
-//set roll numbers
-void seat_allot::set_roll_no()
-	{
-		{		
-			branch1=start_roll_no[a];
-			branch2=start_roll_no[b];
-		}
-	}
-
-//to set new branch after an exisiting branch
-
-void seat_allot::set_new_branch()
-	{ 			
-			if(branch1 > end_roll_no[a] )
-				{	
-					a++;
-					if(branch2<=end_roll_no[b])
-						{ 
-							a++;
-							branch1=start_roll_no[a]; branch_count--;
-						}
-					else
-						{  branch1=start_roll_no[a]; branch_count--;} 
-		
-				}
-			if(branch2 > end_roll_no[b] )
-				{	
-					b++;
-					if(branch1<=end_roll_no[a])
-						{  
-							b++;
-							branch2=start_roll_no[b]; branch_count--;
-						}
-					else
-						{  branch2=start_roll_no[b]; branch_count--;} 
-		
-				}
-			if(branch_count<0)
-				{ branch1=0; branch2=0;}
-		
-	}
-
-//seat allocation
-void seat_allot :: fix_seat()
-	{
-		//int seat[6][7];
-		//rows= ,columns=	;	
-		set_roll_no();
-		for(i=0;i<max_room;i++)
+			for(y=0; y<row; y++)	// Loop for number of rows in a room
 			{
-
-				int col=columns[i];
-				int row=rows[i];
-				int seat[row][col];
-
-				for(j=0;j<row;j++)
-					{
-
-						for(k=0;k<col;k++ )
-						{
-							set_new_branch();
-							if(j%2==0)
-							{
-								seat[j][k]=branch1;
-								//cout<<"A"<<seat[j][k]<<"\t";
-								branch1++;
-							}
-							else
-							{
-								seat[j][k]=branch2;
-								//cout<<seat[j][k]<<"\t";
-								branch2++;
-							}
-						
-						} //cout<<"\n";
-
-					}//cout<<"\n\n";	
-
-	 			     
-				for(int j=0;j<row;j++)
+				set_rollno();		// call to set_rollno() function
+				if(y%2==0)
 				{
-					for(int k=0;k<col;k++)
-						{
-							cout<<seat[j][k]<<"\t";
-						} cout<<"\n";
-				}cout<<"\n\n";
-			}	
+					seat[x][y] = start_roll1;	// seat allocation
+					start_roll1++;
+				}
+				else
+				{
+					seat[x][y] = start_roll2;
+					start_roll2++;
+				}
+				
+			}
+			
+		}
+		output(row,col);			// call to the output() function
 	}
+}
+
+void seat_planner :: output(int r, int c)      // definition of output member function 
+{
+	cout<<"\n\n\t\t Room No: "<<room<<"\n\n";
+	for(x=0; x<r; x++)
+		{										//Displaying Final allocated seats
+			for(y=0; y<c; y++)
+			{
+				cout<<seat[y][x]<<"\t\t";
+			}
+			cout<<"\n";
+		}
+}
+
+
