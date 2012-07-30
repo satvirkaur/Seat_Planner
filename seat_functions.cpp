@@ -22,17 +22,28 @@ void details :: rollno_details()
 	}
 }
 
+
 // definition of static variables.
 int seat_planner :: nxt_branch;
 int seat_planner :: nxt_room;
 
-void seat_planner::room_header()
+// To get the details of the examination
+void seat_planner::exam_details()
 {
-	cout<<"Enter the Name of the Test\n";
-	cin>>test_name;
-	cout<<"\nEnter Date of the Test AS day month year";
-	cin>>day>>month>>year;
+	cout<<"1.Enter the Name of the Test"
+		<<"\n2.	Enter Date of the Test i.e  00-00-0000"
+		<<"\n3.	Timing i.e 12:00a.m  2:00p.m"; 
+	cin>>test_name>>exam_date>>start_time>>end_time;
 }
+
+// To display the details of the examination
+void seat_planner::examd_display()
+{
+	outfile.open("output.txt", ios::app);
+	outfile<<"\n\n\t\t\t\t\t"<<test_name<<"  Test\n\n\tDate:		"
+		<<exam_date<<"\n\tTimings:	"<<start_time<<"  To  "<<end_time;
+}
+
 
 //definition of derived class's member function that calling to base class's member functions to get all details. 
 void seat_planner :: get_details()
@@ -131,8 +142,7 @@ void seat_planner :: seat_plan() // function definition to allocate a seat to a 
 void seat_planner :: output(int r, int c)      // definition of output member function 
 {
 	count_rollno();
-	outfile.open("output.txt", ios::app);
-	outfile<<"\n\n\t\t\t\t\t\t\t\t\t"<<test_name<<"\n\n\tDate: "<<day<<"-"<<month<<"-"<<year;
+	examd_display();
 	outfile<<"\n\n\t\t Room No: "<<room<<"\n\n";
 	for(x=0; x<r; x++)
 	{										//Displaying Final allocated seats
@@ -184,7 +194,7 @@ void seat_planner :: valid()
 		switch(choice)
 		{
 			case 'Y':
-				room_header();
+				exam_details();
 				seat_plan();		  // call to seat_plan() member function of derived class
 				cout<<"\n Check output.txt file for seat plan."<<endl;
 				break;

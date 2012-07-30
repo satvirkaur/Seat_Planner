@@ -1,8 +1,9 @@
 
 
-									Ph.D
+					PH.D
 
-	Date: 12-3-2012
+	Date:		16-03-2012
+	Timings:	2:00pm  To  4:00pm
 
 		 Room No: R1
 
@@ -17,9 +18,10 @@ IT:	18
 CSE:	18
 
 
-									Ph.D
+					PH.D
 
-	Date: 12-3-2012
+	Date:		16-03-2012
+	Timings:	2:00pm  To  4:00pm
 
 		 Room No: R2
 
@@ -38,9 +40,10 @@ ECE:	11
 MECH:	11
 
 
-									Ph.D
+					PH.D
 
-	Date: 12-3-2012
+	Date:		16-03-2012
+	Timings:	2:00pm  To  4:00pm
 
 		 Room No: R3
 
@@ -56,9 +59,10 @@ MECH:	18
 EE:	10
 
 
-									Ph.D
+					PH.D
 
-	Date: 12-3-2012
+	Date:		16-03-2012
+	Timings:	2:00pm  To  4:00pm
 
 		 Room No: R4
 
@@ -75,9 +79,10 @@ MECH:	24
 EE:	24
 
 
-									Ph.D
+					PH.D
 
-	Date: 12-3-2012
+	Date:		16-03-2012
+	Timings:	2:00pm  To  4:00pm
 
 		 Room No: R5
 
@@ -93,9 +98,10 @@ EE:	18
 MBA:	16
 
 
-									Ph.D
+					PH.D
 
-	Date: 12-3-2012
+	Date:		16-03-2012
+	Timings:	2:00pm  To  4:00pm
 
 		 Room No: R6
 

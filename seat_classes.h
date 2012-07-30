@@ -47,8 +47,8 @@ protected:
 
 	//the below static variable are for fetching the index of next branch and next room
 	static int nxt_branch, nxt_room; 
-	short day,month,year; 
-	string room,test_name;
+	//short day,month,year; 
+	string room, test_name, exam_date, start_time, end_time;
 	
 public:
 
@@ -62,7 +62,8 @@ public:
 	string branch(int rno);
 	void count_rollno();
 	void startend_roll();
-	void room_header();
+	void exam_details();
+	void examd_display();
 
 };
 
