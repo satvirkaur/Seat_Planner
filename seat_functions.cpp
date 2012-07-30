@@ -138,7 +138,7 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 	{
 		if(count[i] != 0)
 		{
-			outfile<<branches[i]<<"\t"<<count[i]<<endl;
+			outfile<<branches[i]<<":\t"<<count[i]<<endl;
 		}
 	}
 	outfile.close();	
