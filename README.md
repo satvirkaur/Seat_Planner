@@ -1,4 +1,4 @@
-seat-planner
+Seat Planner
 ============
 
 Seat Planner project for allotting seats for any test.
