@@ -191,3 +191,16 @@ string seat_planner :: branch(int rno)
 	}
 	return brnch;
 }
+
+
+void seat_planner::count_rollno()
+{
+	for(x=0;x<t_branches;x++)
+	{
+		count[x]=0;
+
+	}
+
+
+
+}
