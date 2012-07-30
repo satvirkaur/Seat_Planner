@@ -200,7 +200,4 @@ void seat_planner::count_rollno()
 		count[x]=0;
 
 	}
-
-
-
 }
