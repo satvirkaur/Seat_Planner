@@ -18,7 +18,7 @@ void details :: rollno_details()
 	infile>>t_branches;
 	for(int i=0; i<t_branches; i++)
 	{
-		infile>>branch[i]>>start_roll[i]>>end_roll[i];
+		infile>>branches[i]>>start_roll[i]>>end_roll[i];
 	}
 }
 
@@ -128,7 +128,7 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 	{										//Displaying Final allocated seats
 		for(y=0; y<c; y++)
 		{
-			outfile<<seat[y][x]<<"\t\t";
+			outfile<<branch(seat[y][x])<<" "<<seat[y][x]<<"\t\t";
 		}
 		outfile<<"\n";
 	}
@@ -151,7 +151,7 @@ void seat_planner :: valid()
 
 	if(students > seats)
 	{
-		//system("clear");
+		system("clear");
 		cout<<"\nThis strategy is not applicable because of less seats."<<endl
 			<<"Total Seats: "<<seats<<endl<<"Total students: "<<students<<endl
 			<<"More Seats Required: "<<(students-seats)<<endl
@@ -159,23 +159,35 @@ void seat_planner :: valid()
 	}
 	else if(seats > students || seats == students)
 	{
-		//system("clear");
-		cout<<"\nStrategy applicable. Press 'Y' to continue.";
+		system("clear");
+		cout<<"\nStrategy applicable. Press 'Y' to continue."<<endl;
 		cin>>choice;
 	
 		switch(choice)
 		{
 			case 'Y':
 				seat_plan();		  // call to seat_plan() member function of derived class
-				//system("clear");
 				cout<<"\n Check output.txt file for seat plan."<<endl;
 				break;
 		
 			default:
 				cout<<"\nWrong Choice"<<endl;
+				break;
 		}
 
 	}
 }
 
-
+string seat_planner :: branch(int rno)
+{
+	string brnch;
+	for(int i=0; i<t_branches; i++)
+	{
+		if(rno>=start_roll[i] && rno<=end_roll[i])
+		{
+			brnch = branches[i];
+			break;
+		}		
+	}
+	return brnch;
+}

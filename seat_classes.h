@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+#include <string.h>
 
 using namespace std;
 const int size = 30;
@@ -15,7 +17,7 @@ protected:
 
 	// Roll Number variables
 	int t_branches, start_roll[size], end_roll[size];
-	string branch[size];
+	string branches[size];
 
 	// fstream variable
 	ifstream infile;
@@ -55,6 +57,7 @@ public:
 	void set_rollno();		// setting roll numbers according to branches.
 	void output(int r, int c);		// to display the seat allocation
 	void valid();
+	string branch(int rno);
 
 };
 
