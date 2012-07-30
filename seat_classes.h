@@ -42,11 +42,13 @@ protected:
 	   x and y are variable for loops.
        col and row for storing the number of rows and number of columns of each room
 	*/
-	int seat[size][size], start, end, start_roll1, start_roll2, end_roll1, end_roll2, x, y, col, row, count[size];
+	int seat[size][size], start, end, start_roll1, start_roll2, end_roll1, end_roll2;
+	int x, y, col, row, count[size],startcount_roll[size],endcount_roll[size];
 
 	//the below static variable are for fetching the index of next branch and next room
-	static int nxt_branch, nxt_room;  
-	string room;
+	static int nxt_branch, nxt_room; 
+	short day,month,year; 
+	string room,test_name;
 	
 public:
 
@@ -59,6 +61,8 @@ public:
 	void valid();
 	string branch(int rno);
 	void count_rollno();
+	void startend_roll();
+	void room_header();
 
 };
 

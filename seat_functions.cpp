@@ -26,6 +26,14 @@ void details :: rollno_details()
 int seat_planner :: nxt_branch;
 int seat_planner :: nxt_room;
 
+void seat_planner::room_header()
+{
+	cout<<"Enter the Name of the Test\n";
+	cin>>test_name;
+	cout<<"\nEnter Date of the Test AS day month year";
+	cin>>day>>month>>year;
+}
+
 //definition of derived class's member function that calling to base class's member functions to get all details. 
 void seat_planner :: get_details()
 {
@@ -124,6 +132,7 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 {
 	count_rollno();
 	outfile.open("output.txt", ios::app);
+	outfile<<"\n\n\t\t\t\t\t\t\t\t\t"<<test_name<<"\n\n\tDate: "<<day<<"-"<<month<<"-"<<year;
 	outfile<<"\n\n\t\t Room No: "<<room<<"\n\n";
 	for(x=0; x<r; x++)
 	{										//Displaying Final allocated seats
@@ -175,6 +184,7 @@ void seat_planner :: valid()
 		switch(choice)
 		{
 			case 'Y':
+				room_header();
 				seat_plan();		  // call to seat_plan() member function of derived class
 				cout<<"\n Check output.txt file for seat plan."<<endl;
 				break;
@@ -210,3 +220,12 @@ void seat_planner::count_rollno()
 		count[x]=0;
 	}
 }
+
+/*void seat_planner::startend_roll()
+{
+	for(x=0;x<t_branches;x++)
+	{
+		startcount_roll[x]=0;
+		endcount_roll[x]=0;
+	}
+}*/

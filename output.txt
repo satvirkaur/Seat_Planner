@@ -1,5 +1,9 @@
 
 
+									Ph.D
+
+	Date: 12-3-2012
+
 		 Room No: R1
 
 IT-101		IT-104		IT-107		IT-110		IT-113		IT-116		
@@ -12,6 +16,10 @@ CSE-203		CSE-206		CSE-209		CSE-212		CSE-215		CSE-218
 IT:	18
 CSE:	18
 
+
+									Ph.D
+
+	Date: 12-3-2012
 
 		 Room No: R2
 
@@ -30,6 +38,10 @@ ECE:	11
 MECH:	11
 
 
+									Ph.D
+
+	Date: 12-3-2012
+
 		 Room No: R3
 
 MECH-412		MECH-415		MECH-418		MECH-421		MECH-424		MECH-427		
@@ -43,6 +55,10 @@ CSE:	8
 MECH:	18
 EE:	10
 
+
+									Ph.D
+
+	Date: 12-3-2012
 
 		 Room No: R4
 
@@ -59,6 +75,10 @@ MECH:	24
 EE:	24
 
 
+									Ph.D
+
+	Date: 12-3-2012
+
 		 Room No: R5
 
 MECH-454		MBA-602		MBA-605		MBA-608		MBA-611		MBA-614		
@@ -72,6 +92,10 @@ MECH:	2
 EE:	18
 MBA:	16
 
+
+									Ph.D
+
+	Date: 12-3-2012
 
 		 Room No: R6
 
