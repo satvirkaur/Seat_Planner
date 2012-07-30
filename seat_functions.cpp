@@ -122,6 +122,7 @@ void seat_planner :: seat_plan() // function definition to allocate a seat to a 
 
 void seat_planner :: output(int r, int c)      // definition of output member function 
 {
+	count_rollno();
 	outfile.open("output.txt", ios::app);
 	outfile<<"\n\n\t\t Room No: "<<room<<"\n\n";
 	for(x=0; x<r; x++)
@@ -131,6 +132,14 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 			outfile<<branch(seat[y][x])<<" "<<seat[y][x]<<"\t\t";
 		}
 		outfile<<"\n";
+	}
+	outfile<<"\n";
+	for(int i=0; i<t_branches; i++)
+	{
+		if(count[i] != 0)
+		{
+			outfile<<branches[i]<<"\t"<<count[i]<<endl;
+		}
 	}
 	outfile.close();	
 }
@@ -186,6 +195,7 @@ string seat_planner :: branch(int rno)
 		if(rno>=start_roll[i] && rno<=end_roll[i])
 		{
 			brnch = branches[i];
+			count[i] = count[i] + 1;
 			break;
 		}		
 	}
@@ -198,9 +208,5 @@ void seat_planner::count_rollno()
 	for(x=0;x<t_branches;x++)
 	{
 		count[x]=0;
-
 	}
-
-
-
 }
