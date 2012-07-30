@@ -30,14 +30,16 @@ int seat_planner :: nxt_room;
 // To get the details of the examination
 void seat_planner::exam_details()
 {
-	cout<<"1.Enter the Name of the Test"
-		<<"\n2.	Enter Date of the Test i.e  00-00-0000"
-		<<"\n3.	Timing i.e 12:00a.m  2:00p.m"; 
-	cin>>test_name>>exam_date>>start_time>>end_time;
+	cout<<"1. Enter the Name of the Test\n";
+	cin>>test_name;
+	cout<<"2. Enter Date of the Test as day-month-year i.e  13-03-1990\n";
+	cin>>exam_date;
+	cout<<"3. Timing i.e 12:00a.m  2:00p.m\n"; 
+	cin>>start_time>>end_time;
 }
 
 // To display the details of the examination
-void seat_planner::examd_display()
+void seat_planner::exam_display()
 {
 	outfile.open("output.txt", ios::app);
 	outfile<<"\n\n\t\t\t\t\t"<<test_name<<"  Test\n\n\tDate:		"
@@ -141,8 +143,9 @@ void seat_planner :: seat_plan() // function definition to allocate a seat to a 
 
 void seat_planner :: output(int r, int c)      // definition of output member function 
 {
+	//sum=0;
 	count_rollno();
-	examd_display();
+	exam_display();
 	outfile<<"\n\n\t\t Room No: "<<room<<"\n\n";
 	for(x=0; x<r; x++)
 	{										//Displaying Final allocated seats
@@ -160,6 +163,7 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 			outfile<<branches[i]<<":\t"<<count[i]<<endl;
 		}
 	}
+	//outfile<<"\n"<<sum;
 	outfile.close();	
 }
 
@@ -216,6 +220,7 @@ string seat_planner :: branch(int rno)
 		{
 			brnch = branches[i];
 			count[i] = count[i] + 1;
+			//sum +=i;
 			break;
 		}		
 	}

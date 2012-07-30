@@ -1,9 +1,9 @@
 
 
-					PH.D
+					PH.D  Test
 
-	Date:		16-03-2012
-	Timings:	2:00pm  To  4:00pm
+	Date:		15-04-2012
+	Timings:	11:00am  To  1:00pm
 
 		 Room No: R1
 
@@ -18,10 +18,10 @@ IT:	18
 CSE:	18
 
 
-					PH.D
+					PH.D  Test
 
-	Date:		16-03-2012
-	Timings:	2:00pm  To  4:00pm
+	Date:		15-04-2012
+	Timings:	11:00am  To  1:00pm
 
 		 Room No: R2
 
@@ -40,10 +40,10 @@ ECE:	11
 MECH:	11
 
 
-					PH.D
+					PH.D  Test
 
-	Date:		16-03-2012
-	Timings:	2:00pm  To  4:00pm
+	Date:		15-04-2012
+	Timings:	11:00am  To  1:00pm
 
 		 Room No: R3
 
@@ -59,10 +59,10 @@ MECH:	18
 EE:	10
 
 
-					PH.D
+					PH.D  Test
 
-	Date:		16-03-2012
-	Timings:	2:00pm  To  4:00pm
+	Date:		15-04-2012
+	Timings:	11:00am  To  1:00pm
 
 		 Room No: R4
 
@@ -79,10 +79,10 @@ MECH:	24
 EE:	24
 
 
-					PH.D
+					PH.D  Test
 
-	Date:		16-03-2012
-	Timings:	2:00pm  To  4:00pm
+	Date:		15-04-2012
+	Timings:	11:00am  To  1:00pm
 
 		 Room No: R5
 
@@ -98,10 +98,10 @@ EE:	18
 MBA:	16
 
 
-					PH.D
+					PH.D  Test
 
-	Date:		16-03-2012
-	Timings:	2:00pm  To  4:00pm
+	Date:		15-04-2012
+	Timings:	11:00am  To  1:00pm
 
 		 Room No: R6
 
