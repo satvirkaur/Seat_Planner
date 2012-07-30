@@ -129,7 +129,7 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 	{										//Displaying Final allocated seats
 		for(y=0; y<c; y++)
 		{
-			outfile<<branch(seat[y][x])<<" "<<seat[y][x]<<"\t\t";
+			outfile<<branch(seat[y][x])<<"-"<<seat[y][x]<<"\t\t";
 		}
 		outfile<<"\n";
 	}
@@ -138,7 +138,7 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 	{
 		if(count[i] != 0)
 		{
-			outfile<<branches[i]<<"\t"<<count[i]<<endl;
+			outfile<<branches[i]<<":\t"<<count[i]<<endl;
 		}
 	}
 	outfile.close();	
