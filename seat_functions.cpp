@@ -137,7 +137,7 @@ void seat_planner :: seat_plan()	// Allocate seats
 	{
 		fill_space( start_roll1,  end_roll1);
 	}
-		if(start_roll2 < end_roll2)
+	if(start_roll2 < end_roll2)
 	{
 		fill_space( start_roll2,  end_roll2);	
 	}	
@@ -281,7 +281,7 @@ void seat_planner :: fill_space(int start_roll, int end_roll)
 			{
 				for(y=0;y<rows[r];y++)
 				{
-					if( seat[r][x][y] == 0)
+					if( seat[r][x][y] == 0 && start_roll <= end_roll)
 					{
 						seat[r][x][y]=start_roll;
 						start_roll++;
