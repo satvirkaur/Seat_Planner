@@ -61,10 +61,10 @@ public:
 	string branch(int rno);	// Return branch name
 	void count_rollno();	// Total Students in room
 	void exam_details();	// Getting exam details
-	void exam_display();	// Displaying exam details as a header of the room
+	void exam_display();	// Displaying exam details at the of room
 	void report_choice();
-	void fill_space(int start_roll, int end_roll); //to fill the empty seats with 
-												   //remaining seats
+	// To set remaining seats on empty places
+	void fill_space(int start_roll, int end_roll); 
 
 };
 

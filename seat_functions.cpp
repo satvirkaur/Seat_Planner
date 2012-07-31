@@ -31,9 +31,9 @@ void seat_planner::exam_details()
 {
 	cout<<"\n1. Enter the Name of the Test: ";
 	cin>>test_name;	//getline(cin, test_name);
-	cout<<"\n2. Enter Date of the Test as day-month-year i.e  13-03-1990: ";
+	cout<<"\n2. Enter Date of the Test (eg 13-03-1990): ";
 	cin>>exam_date;
-	cout<<"\n3. Timing i.e 12:00a.m  2:00p.m: "; 
+	cout<<"\n3. Timing (eg 12:00a.m  2:00p.m): "; 
 	cin>>start_time>>end_time;
 }
 
@@ -41,7 +41,7 @@ void seat_planner::exam_details()
 void seat_planner::exam_display()
 {
 	outfile.open("output.txt", ios::app);
-	outfile<<"\n\n\t\t\t\t\t"<<test_name<<"  Test\n\n\tDate:		"
+	outfile<<"\n\n\t\t\t"<<test_name<<"  Test\n\n\tDate:		"
 		<<exam_date<<"\n\tTimings:	"<<start_time<<"  To  "<<end_time;
 }
 
@@ -63,9 +63,9 @@ void seat_planner :: set_room()	// Setting room deatils
 	}
 }
 
-void seat_planner :: set_branch()	// set_branch function of seat_planner
+void seat_planner :: set_branch()	// set_branch of seat_planner
 {
-	if(nxt_branch==0)	// Sets the start and end roll numbers of two branches.
+	if(nxt_branch==0)	// Sets start and end roll nos of two branches.
 	{
 		start_roll1 = start_roll[nxt_branch];
 		end_roll1 = end_roll[nxt_branch];
@@ -157,7 +157,8 @@ void seat_planner :: output()	// To display seat plan
 	{										
 			for(y=0; y<cols[a]; y++)
 			{
-				outfile<<branch(seat[a][y][x])<<"-"<<seat[a][y][x]<<"\t\t";
+				outfile<<branch(seat[a][y][x])<<"-"<<seat[a][y][x]
+				<<"\t";
 			}
 			outfile<<"\n";
 	}
@@ -191,8 +192,9 @@ void seat_planner :: valid()
 	if(students > seats)
 	{
 		system("clear");
-		cout<<"\nThis strategy is not applicable because of less seats."<<endl
-			<<"Total Seats: "<<seats<<endl<<"Total students: "<<students<<endl
+		cout<<"\nThis strategy is not applicable because of less seats."
+			<<endl<<"Total Seats: "<<seats<<endl
+			<<"Total students: "<<students<<endl
 			<<"More Seats Required: "<<(students-seats)<<endl
 			<<"Please add more rooms in input file."<<endl;
 	}
@@ -252,7 +254,8 @@ void seat_planner :: report_choice()
 	{
 		system("clear");
 		cout<<"\n1. Enter 1 to generate the report Room-wise"
-		<<"\n2. Enter 2 to generate the Report Branch-wise\n"<<"3. Exit\n";
+		<<"\n2. Enter 2 to generate the Report Branch-wise\n"
+		<<"3. Exit\n";
 		cin>>choice;
 		switch(choice)
 		{
