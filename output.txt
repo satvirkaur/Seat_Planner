@@ -1,9 +1,9 @@
 
 
-					Ph.d  Test
+					Sessional  Test
 
-	Date:		15-09-2012
-	Timings:	11:00am  To  01:00pm
+	Date:		12-08-2012
+	Timings:	10:30am  To  12:00pm
 
 		 Room No: R6
 
@@ -18,10 +18,10 @@ IT:	18
 CSE:	18
 Total:	36
 
-					Ph.d  Test
+					Sessional  Test
 
-	Date:		15-09-2012
-	Timings:	11:00am  To  01:00pm
+	Date:		12-08-2012
+	Timings:	10:30am  To  12:00pm
 
 		 Room No: R6
 
@@ -40,10 +40,10 @@ ECE:	11
 MECH:	11
 Total:	48
 
-					Ph.d  Test
+					Sessional  Test
 
-	Date:		15-09-2012
-	Timings:	11:00am  To  01:00pm
+	Date:		12-08-2012
+	Timings:	10:30am  To  12:00pm
 
 		 Room No: R6
 
@@ -59,10 +59,10 @@ MECH:	18
 EE:	10
 Total:	36
 
-					Ph.d  Test
+					Sessional  Test
 
-	Date:		15-09-2012
-	Timings:	11:00am  To  01:00pm
+	Date:		12-08-2012
+	Timings:	10:30am  To  12:00pm
 
 		 Room No: R6
 
@@ -79,10 +79,10 @@ MECH:	24
 EE:	24
 Total:	48
 
-					Ph.d  Test
+					Sessional  Test
 
-	Date:		15-09-2012
-	Timings:	11:00am  To  01:00pm
+	Date:		12-08-2012
+	Timings:	10:30am  To  12:00pm
 
 		 Room No: R6
 
@@ -98,10 +98,10 @@ EE:	18
 MBA:	16
 Total:	36
 
-					Ph.d  Test
+					Sessional  Test
 
-	Date:		15-09-2012
-	Timings:	11:00am  To  01:00pm
+	Date:		12-08-2012
+	Timings:	10:30am  To  12:00pm
 
 		 Room No: R6
 

@@ -24,46 +24,40 @@ protected:
 	ofstream outfile;
 
 public:
-	//The functions getting Details about rooms and roll numbers of each branch.
+	// Getting Details about room and branch.
 	void room_details();
 	void rollno_details();
 
 };
 
-// seat_planner is derived class and inherting base class deatils.
+// Derived class from base class (details)
 class seat_planner : public details
 {
 protected:
 
-	/* array variable is used to store the seat allocation row and column wise.
-	   start and end variables are being used for storing the start and end roll number of the branch.
-	   start_roll1 and start_roll2 are used for storing the start roll numbers of different two branches. 
-	   Similarly, end_roll1 and end_roll2 for ending roll numbers storage.
-	   x and y are variable for loops.
-       col and row for storing the number of rows and number of columns of each room
-	*/  
-	int seat[size][size][size], start, end, start_roll1, start_roll2, end_roll1, end_roll2;
-	int x, y, col, row, count[size],startcount_roll[size],endcount_roll[size], sum,choice;
+	int seat[size][size][size];	// For storing seat plan
+	int start, end, start_roll1, start_roll2, end_roll1, end_roll2;
+	int x, y, col, row, count[size], choice, sum;
 
-	//the below static variable are for fetching the index of next branch and next room
+	// For next branch and next room
 	static int nxt_branch, nxt_room; 
-	//short day,month,year; 
+	
+	// For test deatils 
 	string room, test_name, exam_date, start_time, end_time;
 	
 public:
 
-	void get_details();		// to call the base class functions having all details of rooms as well as branches and their roll numbers.
-	void set_branch();		// to set new branch after old one has finished.
-	void set_room();		// to set new room
-	void seat_plan();		// to fix the seat allocation	
-	void set_rollno();		// setting roll numbers according to branches.
-	void output();		// to display the seat allocation
-	void valid();
-	string branch(int rno);
-	void count_rollno();
-	void startend_roll();
-	void exam_details();     //getting exam details
-	void exam_display();     //displaying exam details as a header of the room
+	void get_details();	// Getting deatils
+	void set_branch();	// To set new branch after old one has finished.
+	void set_room();	// To set new room
+	void seat_plan();	// to fix the seat allocation	
+	void set_rollno();	// Setting roll numbers according to branches.
+	void output();	// To display the seat allocation
+	void valid();	// Validations for strategy
+	string branch(int rno);	// Return branch name
+	void count_rollno();	// Total Students in room
+	void exam_details();	// Getting exam details
+	void exam_display();	// Displaying exam details as a header of the room
 	void report_choice();
 
 };
