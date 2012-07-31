@@ -4,7 +4,7 @@
 // Reading room deatils from I/P file
 void details :: room_details()
 {
-	infile.open("seat_input.in");
+	infile.open(input_file);
 	infile>>t_rooms;
 	for(int i=0; i<t_rooms; i++)
 	{
@@ -29,11 +29,11 @@ int seat_planner :: nxt_room;
 // Exam Details
 void seat_planner::exam_details()
 {
-	cout<<"1. Enter the Name of the Test\n";
-	cin>>test_name;
-	cout<<"2. Enter Date of the Test as day-month-year i.e  13-03-1990\n";
+	cout<<"\n1. Enter the Name of the Test: ";
+	cin>>test_name;	//getline(cin, test_name);
+	cout<<"\n2. Enter Date of the Test as day-month-year i.e  13-03-1990: ";
 	cin>>exam_date;
-	cout<<"3. Timing i.e 12:00a.m  2:00p.m\n"; 
+	cout<<"\n3. Timing i.e 12:00a.m  2:00p.m: "; 
 	cin>>start_time>>end_time;
 }
 
@@ -120,26 +120,26 @@ void seat_planner :: seat_plan()	// Allocate seats
 			{
 				set_rollno();       // Call to set_rollno() function
 				if(y%2==0)
-					{
-						seat[rm][x][y] = start_roll1;	// seat allocation
-						start_roll1++;
-					}
+				{
+					seat[rm][x][y] = start_roll1;	// seat allocation
+					start_roll1++;
+				}
 				else
-					{
-						seat[rm][x][y] = start_roll2;
-						start_roll2++;
-					}
+				{
+					seat[rm][x][y] = start_roll2;
+					start_roll2++;
+				}
 			}
 			
 		}
 	}
 	if(start_roll1 < end_roll1)        
 	{
-		fill_space( start_roll1,  end_roll1);
+		fill_space(start_roll1,  end_roll1);
 	}
 	if(start_roll2 < end_roll2)
 	{
-		fill_space( start_roll2,  end_roll2);	
+		fill_space(start_roll2,  end_roll2);	
 	}	
 }
 
@@ -206,7 +206,7 @@ void seat_planner :: valid()
 		{
 			case 'Y':
 				exam_details();
-				report_choice();
+				//report_choice();
 				seat_plan();	// Call to seat_plan() function
 				cout<<"\n Check output.txt file for seat plan."<<endl;
 				break;
@@ -228,9 +228,9 @@ string seat_planner :: branch(int rno)
 		{
 			brnch = branches[i];
 			count[i] = count[i] + 1;
-			sum +=1;
+			sum += 1;
 			break;
-		}		
+		}
 	}
 	return brnch;
 }

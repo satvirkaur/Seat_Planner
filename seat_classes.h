@@ -1,9 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-//#include <string.h>
+#include <stdio.h>
+#include "files.h"
+#include <string.h>
 
 using namespace std;
+
 const int size = 30;
 
 // base class for getting the Details.
@@ -43,7 +46,8 @@ protected:
 	static int nxt_branch, nxt_room; 
 	
 	// For test deatils 
-	string room, test_name, exam_date, start_time, end_time;
+	string room, exam_date, start_time, end_time, test_name; 
+	//char test_name[size];
 	
 public:
 
