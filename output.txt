@@ -1,9 +1,9 @@
 
 
-					PH.D  Test
+					Ph.d  Test
 
-	Date:		15-04-2012
-	Timings:	11:00am  To  1:00pm
+	Date:		15-09-2012
+	Timings:	11:00am  To  12:00am
 
 		 Room No: R1
 
@@ -16,12 +16,12 @@ CSE-203		CSE-206		CSE-209		CSE-212		CSE-215		CSE-218
 
 IT:	18
 CSE:	18
+Total:	36
 
+					Ph.d  Test
 
-					PH.D  Test
-
-	Date:		15-04-2012
-	Timings:	11:00am  To  1:00pm
+	Date:		15-09-2012
+	Timings:	11:00am  To  12:00am
 
 		 Room No: R2
 
@@ -38,12 +38,12 @@ IT:	2
 CSE:	24
 ECE:	11
 MECH:	11
+Total:	48
 
+					Ph.d  Test
 
-					PH.D  Test
-
-	Date:		15-04-2012
-	Timings:	11:00am  To  1:00pm
+	Date:		15-09-2012
+	Timings:	11:00am  To  12:00am
 
 		 Room No: R3
 
@@ -57,12 +57,12 @@ CSE-245		CSE-248		EE-501		EE-504		EE-507		EE-510
 CSE:	8
 MECH:	18
 EE:	10
+Total:	36
 
+					Ph.d  Test
 
-					PH.D  Test
-
-	Date:		15-04-2012
-	Timings:	11:00am  To  1:00pm
+	Date:		15-09-2012
+	Timings:	11:00am  To  12:00am
 
 		 Room No: R4
 
@@ -77,12 +77,12 @@ EE-514		EE-518		EE-522		EE-526		EE-530		EE-534
 
 MECH:	24
 EE:	24
+Total:	48
 
+					Ph.d  Test
 
-					PH.D  Test
-
-	Date:		15-04-2012
-	Timings:	11:00am  To  1:00pm
+	Date:		15-09-2012
+	Timings:	11:00am  To  12:00am
 
 		 Room No: R5
 
@@ -96,12 +96,12 @@ EE-537		EE-540		EE-543		EE-546		EE-549		EE-552
 MECH:	2
 EE:	18
 MBA:	16
+Total:	36
 
+					Ph.d  Test
 
-					PH.D  Test
-
-	Date:		15-04-2012
-	Timings:	11:00am  To  1:00pm
+	Date:		15-09-2012
+	Timings:	11:00am  To  12:00am
 
 		 Room No: R6
 
@@ -116,3 +116,4 @@ MBA-620		MBA-624		MBA-628		MBA-632		MBA-636		MBA-640
 
 EE:	3
 MBA:	24
+Total:	27

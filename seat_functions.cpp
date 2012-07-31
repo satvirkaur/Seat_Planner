@@ -27,6 +27,7 @@ void details :: rollno_details()
 int seat_planner :: nxt_branch;
 int seat_planner :: nxt_room;
 
+
 // To get the details of the examination
 void seat_planner::exam_details()
 {
@@ -122,18 +123,17 @@ void seat_planner :: seat_plan() // function definition to allocate a seat to a 
 		{
 			for(y=0; y<row; y++)	// Loop for number of rows in a room
 			{
-				set_rollno();		// call to set_rollno() function
+				set_rollno();       // call to set_rollno() function
 				if(y%2==0)
-				{
-					seat[x][y] = start_roll1;	// seat allocation
-					start_roll1++;
-				}
+					{
+						seat[x][y] = start_roll1;	// seat allocation
+						start_roll1++;
+					}
 				else
-				{
-					seat[x][y] = start_roll2;
-					start_roll2++;
-				}
-				
+					{
+						seat[x][y] = start_roll2;
+						start_roll2++;
+					}
 			}
 			
 		}
@@ -143,7 +143,7 @@ void seat_planner :: seat_plan() // function definition to allocate a seat to a 
 
 void seat_planner :: output(int r, int c)      // definition of output member function 
 {
-	//sum=0;
+	sum=0;
 	count_rollno();
 	exam_display();
 	outfile<<"\n\n\t\t Room No: "<<room<<"\n\n";
@@ -163,7 +163,7 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 			outfile<<branches[i]<<":\t"<<count[i]<<endl;
 		}
 	}
-	//outfile<<"\n"<<sum;
+	outfile<<"Total:\t"<<sum;
 	outfile.close();	
 }
 
@@ -199,6 +199,7 @@ void seat_planner :: valid()
 		{
 			case 'Y':
 				exam_details();
+				report_choice();
 				seat_plan();		  // call to seat_plan() member function of derived class
 				cout<<"\n Check output.txt file for seat plan."<<endl;
 				break;
@@ -220,7 +221,7 @@ string seat_planner :: branch(int rno)
 		{
 			brnch = branches[i];
 			count[i] = count[i] + 1;
-			//sum +=i;
+			sum +=1;
 			break;
 		}		
 	}
@@ -236,11 +237,33 @@ void seat_planner::count_rollno()
 	}
 }
 
-/*void seat_planner::startend_roll()
+
+void seat_planner :: report_choice()
 {
-	for(x=0;x<t_branches;x++)
+	
+	do 
 	{
-		startcount_roll[x]=0;
-		endcount_roll[x]=0;
-	}
-}*/
+		system("clear");
+		cout<<"\n1. Enter 1 to generate the report Room-wise"
+		<<"\n2. Enter 2 to generate the Report Branch-wise\n"<<"3. Exit\n";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:
+			cout<<"\n you entered 1";
+			break;
+		
+			case 2:
+			cout<<"\nyou entered 2";		
+			break;
+			
+			/*case 3:
+			cout<<"Exit";
+			break;*/
+			
+			default:
+			cout<<"Wrong Choice!!!!! Enter your choice again";
+		}
+	} while(choice!=1 && choice!=2);
+}
+
