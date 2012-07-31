@@ -42,7 +42,7 @@ protected:
 	   x and y are variable for loops.
        col and row for storing the number of rows and number of columns of each room
 	*/  
-	int seat[size][size], start, end, start_roll1, start_roll2, end_roll1, end_roll2;
+	int seat[size][size][size], start, end, start_roll1, start_roll2, end_roll1, end_roll2;
 	int x, y, col, row, count[size],startcount_roll[size],endcount_roll[size], sum,choice;
 
 	//the below static variable are for fetching the index of next branch and next room
@@ -57,7 +57,7 @@ public:
 	void set_room();		// to set new room
 	void seat_plan();		// to fix the seat allocation	
 	void set_rollno();		// setting roll numbers according to branches.
-	void output(int r, int c);		// to display the seat allocation
+	void output();		// to display the seat allocation
 	void valid();
 	string branch(int rno);
 	void count_rollno();

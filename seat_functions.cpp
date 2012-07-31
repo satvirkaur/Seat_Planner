@@ -126,34 +126,38 @@ void seat_planner :: seat_plan() // function definition to allocate a seat to a 
 				set_rollno();       // call to set_rollno() function
 				if(y%2==0)
 					{
-						seat[x][y] = start_roll1;	// seat allocation
+						seat[rm][x][y] = start_roll1;	// seat allocation
 						start_roll1++;
 					}
 				else
 					{
-						seat[x][y] = start_roll2;
+						seat[rm][x][y] = start_roll2;
 						start_roll2++;
 					}
 			}
 			
 		}
-		output(row,col);			// call to the output() function
+		//output(rm,row,col);			// call to the output() function
 	}
 }
 
-void seat_planner :: output(int r, int c)      // definition of output member function 
+void seat_planner :: output()      // definition of output member function 
 {
+	
+	for(int a=0;a<t_rooms;a++)
+	{
+	
 	sum=0;
 	count_rollno();
 	exam_display();
 	outfile<<"\n\n\t\t Room No: "<<room<<"\n\n";
-	for(x=0; x<r; x++)
+	for(x=0; x<rows[a]; x++)
 	{										//Displaying Final allocated seats
-		for(y=0; y<c; y++)
-		{
-			outfile<<branch(seat[y][x])<<"-"<<seat[y][x]<<"\t\t";
-		}
-		outfile<<"\n";
+			for(y=0; y<cols[a]; y++)
+			{
+				outfile<<branch(seat[a][y][x])<<"-"<<seat[a][y][x]<<"\t\t";
+			}
+			outfile<<"\n";
 	}
 	outfile<<"\n";
 	for(int i=0; i<t_branches; i++)
@@ -164,7 +168,8 @@ void seat_planner :: output(int r, int c)      // definition of output member fu
 		}
 	}
 	outfile<<"Total:\t"<<sum;
-	outfile.close();	
+	outfile.close();
+	}	
 }
 
 void seat_planner :: valid()
@@ -256,11 +261,7 @@ void seat_planner :: report_choice()
 			case 2:
 			cout<<"\nyou entered 2";		
 			break;
-			
-			/*case 3:
-			cout<<"Exit";
-			break;*/
-			
+						
 			default:
 			cout<<"Wrong Choice!!!!! Enter your choice again";
 		}

@@ -3,9 +3,9 @@
 					Ph.d  Test
 
 	Date:		15-09-2012
-	Timings:	11:00am  To  12:00am
+	Timings:	11:00am  To  01:00pm
 
-		 Room No: R1
+		 Room No: R6
 
 IT-101		IT-104		IT-107		IT-110		IT-113		IT-116		
 CSE-201		CSE-204		CSE-207		CSE-210		CSE-213		CSE-216		
@@ -21,9 +21,9 @@ Total:	36
 					Ph.d  Test
 
 	Date:		15-09-2012
-	Timings:	11:00am  To  12:00am
+	Timings:	11:00am  To  01:00pm
 
-		 Room No: R2
+		 Room No: R6
 
 IT-119		ECE-303		ECE-307		ECE-311		MECH-404		MECH-408		
 CSE-219		CSE-223		CSE-227		CSE-231		CSE-235		CSE-239		
@@ -43,9 +43,9 @@ Total:	48
 					Ph.d  Test
 
 	Date:		15-09-2012
-	Timings:	11:00am  To  12:00am
+	Timings:	11:00am  To  01:00pm
 
-		 Room No: R3
+		 Room No: R6
 
 MECH-412		MECH-415		MECH-418		MECH-421		MECH-424		MECH-427		
 CSE-243		CSE-246		CSE-249		EE-502		EE-505		EE-508		
@@ -62,9 +62,9 @@ Total:	36
 					Ph.d  Test
 
 	Date:		15-09-2012
-	Timings:	11:00am  To  12:00am
+	Timings:	11:00am  To  01:00pm
 
-		 Room No: R4
+		 Room No: R6
 
 MECH-430		MECH-434		MECH-438		MECH-442		MECH-446		MECH-450		
 EE-511		EE-515		EE-519		EE-523		EE-527		EE-531		
@@ -82,9 +82,9 @@ Total:	48
 					Ph.d  Test
 
 	Date:		15-09-2012
-	Timings:	11:00am  To  12:00am
+	Timings:	11:00am  To  01:00pm
 
-		 Room No: R5
+		 Room No: R6
 
 MECH-454		MBA-602		MBA-605		MBA-608		MBA-611		MBA-614		
 EE-535		EE-538		EE-541		EE-544		EE-547		EE-550		
@@ -101,7 +101,7 @@ Total:	36
 					Ph.d  Test
 
 	Date:		15-09-2012
-	Timings:	11:00am  To  12:00am
+	Timings:	11:00am  To  01:00pm
 
 		 Room No: R6
 

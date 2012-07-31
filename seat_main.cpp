@@ -7,6 +7,7 @@ int main()
 	seat_planner seatplan;        // creating object of the seat_planner class
 	seatplan.get_details();	      // call to get_deatils() member function of derived class
 	seatplan.valid();
+	seatplan.output();
 
 	return 0;
 }
