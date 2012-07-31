@@ -2,6 +2,7 @@ Seat Planner
 ============
 
 Seat Planner project for allotting seats for any test.
+____________
 
 This project includes 3 files: seat_classes.h, seat_functions.cpp, seat_main.cpp
 

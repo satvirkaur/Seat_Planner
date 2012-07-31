@@ -4,8 +4,8 @@
 //definition of main function
 int main()
 {
-	seat_planner seatplan;        // creating object of the seat_planner class
-	seatplan.get_details();	      // call to get_deatils() member function of derived class
+	seat_planner seatplan;	// Object of seat_planner class
+	seatplan.get_details();	// Calling get_deatils()
 	seatplan.valid();
 	seatplan.output();
 
