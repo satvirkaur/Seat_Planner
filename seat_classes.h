@@ -1,6 +1,6 @@
-#include <iostream>
+//#include <iostream>
 #include <fstream>
-#include <cstdlib>
+//#include <cstdlib>
 //#include <string.h>
 
 using namespace std;

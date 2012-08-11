@@ -1,4 +1,13 @@
 // Including seat_classes.h file that has class declaration
+#include <iostream>
+//#include <fstream>
+#include <cstdlib>
+#include <string.h>
+
+
+
+
+
 #include "seat_classes.h"
 
 // Reading room deatils from I/P file
@@ -273,19 +282,16 @@ void seat_planner :: report_choice()
 //used to fill the remaining seats.
 void seat_planner :: fill_space(int start_roll, int end_roll)
 {
-	if(start_roll < end_roll)
+	for(int r=0;r<t_rooms;r++)
 	{
-		for(int r=0;r<t_rooms;r++)
+		for(x=0;x<cols[r];x++)
 		{
-			for(x=0;x<cols[r];x++)
+			for(y=0;y<rows[r];y++)
 			{
-				for(y=0;y<rows[r];y++)
+				if( seat[r][x][y] == 0 && start_roll <= end_roll)
 				{
-					if( seat[r][x][y] == 0)
-					{
-						seat[r][x][y]=start_roll;
-						start_roll++;
-					}
+					seat[r][x][y]=start_roll;
+					start_roll++;
 				}
 			}
 		}		
