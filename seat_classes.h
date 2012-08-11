@@ -1,9 +1,17 @@
 //#include <iostream>
 #include <fstream>
+<<<<<<< HEAD
 //#include <cstdlib>
 //#include <string.h>
+=======
+#include <cstdlib>
+#include <stdio.h>
+#include "files.h"
+#include <string.h>
+>>>>>>> dd27b8864cfe93644892b02a5d48a0f1682eb035
 
 using namespace std;
+
 const int size = 30;
 
 // base class for getting the Details.
@@ -43,7 +51,8 @@ protected:
 	static int nxt_branch, nxt_room; 
 	
 	// For test deatils 
-	string room, test_name, exam_date, start_time, end_time;
+	string room, exam_date, start_time, end_time, test_name; 
+	//char test_name[size];
 	
 public:
 
@@ -57,10 +66,10 @@ public:
 	string branch(int rno);	// Return branch name
 	void count_rollno();	// Total Students in room
 	void exam_details();	// Getting exam details
-	void exam_display();	// Displaying exam details as a header of the room
+	void exam_display();	// Displaying exam details at the of room
 	void report_choice();
-	void fill_space(int start_roll, int end_roll); //to fill the empty seats with 
-												   //remaining seats
+	// To set remaining seats on empty places
+	void fill_space(int start_roll, int end_roll); 
 
 };
 
