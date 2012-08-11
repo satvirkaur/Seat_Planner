@@ -1,17 +1,9 @@
 //#include <iostream>
 #include <fstream>
-<<<<<<< HEAD
-//#include <cstdlib>
-//#include <string.h>
-=======
 #include <cstdlib>
-#include <stdio.h>
-#include "files.h"
-#include <string.h>
->>>>>>> dd27b8864cfe93644892b02a5d48a0f1682eb035
+//#include <string.h>
 
 using namespace std;
-
 const int size = 30;
 
 // base class for getting the Details.
@@ -66,7 +58,7 @@ public:
 	string branch(int rno);	// Return branch name
 	void count_rollno();	// Total Students in room
 	void exam_details();	// Getting exam details
-	void exam_display();	// Displaying exam details at the of room
+	void exam_display();	// Disply aying exam details at the of room
 	void report_choice();
 	// To set remaining seats on empty places
 	void fill_space(int start_roll, int end_roll); 

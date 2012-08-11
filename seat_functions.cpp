@@ -1,14 +1,10 @@
-// Including seat_classes.h file that has class declaration
+//#include <iostream>
 #include <iostream>
-//#include <fstream>
-#include <cstdlib>
+//#include <stdio.h>
+#include "files.h"
+#include"seat_classes.h"
 #include <string.h>
 
-
-
-
-
-#include "seat_classes.h"
 
 // Reading room deatils from I/P file
 void details :: room_details()
@@ -161,7 +157,7 @@ void seat_planner :: output()	// To display seat plan
 	sum=0;
 	count_rollno();
 	exam_display();
-	outfile<<"\n\n\t\t Room No: "<<room<<"\n\n";
+	outfile<<"\n\n\t\t Room No: "<<room_no[a]<<"\n\n";
 	for(x=0; x<rows[a]; x++)
 	{										
 			for(y=0; y<cols[a]; y++)
@@ -293,16 +289,9 @@ void seat_planner :: fill_space(int start_roll, int end_roll)
 			{
 				if( seat[r][x][y] == 0 && start_roll <= end_roll)
 				{
-<<<<<<< HEAD
+
 					seat[r][x][y]=start_roll;
 					start_roll++;
-=======
-					if( seat[r][x][y] == 0 && start_roll <= end_roll)
-					{
-						seat[r][x][y]=start_roll;
-						start_roll++;
-					}
->>>>>>> dd27b8864cfe93644892b02a5d48a0f1682eb035
 				}
 			}
 		}		
