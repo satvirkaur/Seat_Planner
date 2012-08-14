@@ -11,10 +11,7 @@ Use Makefile to run this program
 	$ make
 
 2) To run:
-	$ make run
+	$ ./seat
 
-3) To remove output file:
-	$ make output
-
-4) To remove executable file:
+3) To remove executable and output files:
 	$ make clean

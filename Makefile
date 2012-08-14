@@ -10,6 +10,4 @@ seat_functions.o: seat_functions.cpp seat_classes.h files.h
 	g++ -c seat_functions.cpp 
 
 clean:
-	rm -f *.o seat output.txt
-
-
+	rm -f *.o seat seatplan.out

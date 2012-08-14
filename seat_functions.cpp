@@ -1,10 +1,7 @@
-//#include <iostream>
 #include <iostream>
-//#include <stdio.h>
 #include "files.h"
 #include"seat_classes.h"
 #include <string.h>
-
 
 // Reading room deatils from I/P file
 void details :: room_details()
@@ -38,16 +35,16 @@ void seat_planner::exam_details()
 	cin>>test_name;	//getline(cin, test_name);
 	cout<<"\n2. Enter Date of the Test (eg 13-03-1990): ";
 	cin>>exam_date;
-	cout<<"\n3. Timing (eg 12:00a.m  2:00p.m): "; 
+	cout<<"\n3. Timing (eg 12:00pm  2:00pm): "; 
 	cin>>start_time>>end_time;
 }
 
 // To display exam deatils
 void seat_planner::exam_display()
 {
-	outfile.open("output.txt", ios::app);
+	//outfile.open("seatplan.out");//, ios::app);
 	outfile<<"\n\n\t\t\t"<<test_name<<"  Test\n\n\tDate:		"
-		<<exam_date<<"\n\tTimings:	"<<start_time<<"  To  "<<end_time;
+		<<exam_date<<"\n\tTimings:	"<<start_time<<"  to  "<<end_time;
 }
 
 void seat_planner :: get_details()
@@ -150,7 +147,9 @@ void seat_planner :: seat_plan()	// Allocate seats
 
 void seat_planner :: output()	// To display seat plan
 {
-	
+
+	outfile.open("seatplan.out");//, ios::app);
+		
 	for(int a=0;a<t_rooms;a++)
 	{
 	
@@ -176,8 +175,8 @@ void seat_planner :: output()	// To display seat plan
 		}
 	}
 	outfile<<"Total:\t"<<sum;
-	outfile.close();
-	}	
+	}
+	outfile.close();	
 }
 
 void seat_planner :: valid()
@@ -215,7 +214,7 @@ void seat_planner :: valid()
 				exam_details();
 				//report_choice();
 				seat_plan();	// Call to seat_plan() function
-				cout<<"\n Check output.txt file for seat plan."<<endl;
+				cout<<"\n Check seatplan.out file for seat plan."<<endl;
 				break;
 		
 			default:

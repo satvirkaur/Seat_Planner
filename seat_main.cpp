@@ -1,7 +1,5 @@
 // including the seat.cpp which has definitiond of all member functions.
-#include<iostream>
 #include"seat_classes.h"
-#include"files.h"
 using namespace std;
 
 //definition of main function
