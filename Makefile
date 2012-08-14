@@ -1,7 +1,7 @@
 OBJ = seat_main.o seat_functions.o 		                       		# target
 CC = g++									# compiler variable
-DEBUG = -g									# Flag used for debugging 
-CFLAGS = -Wall -c $(DEBUG)							# flag used in linking
+DEBUG = -g									# debugging flag 
+CFLAGS = -Wall -c $(DEBUG)							# linking flag
 LFLAGS = -Wall $(DEBUG)					  	  # flag used in compiling and creating object files	
 
 # All targets 
@@ -15,11 +15,11 @@ seat: $(OBJ)
 run: 
 	./seat
 
-# dependencies of seat_main.
+# dependencies of seat_main.cpp
 seat_main.o: seat_main.cpp seat_classes.h files.h
 	$(CC) $(CFLAGS) seat_main.cpp
 
-# dependecies of seat_functions.cpp
+# dependencies of seat_functions.cpp
 seat_functions.o: seat_functions.cpp seat_classes.h files.h
 	$(CC) $(CFLAGS) seat_functions.cpp 
 
