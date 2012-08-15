@@ -10,5 +10,5 @@ Use Makefile to run this program
 1) To run:
 	$ make
 
-3) To remove executable and output files:
+2) To remove executable and output files:
 	$ make clean
